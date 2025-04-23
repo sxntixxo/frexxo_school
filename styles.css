@@ -1,0 +1,340 @@
+/* ===================== BASE ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #44bd32;
+    --primary-hover: #4cd137;
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --radius: 10px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --font-main: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+  }
+  
+  /* ===================== HEADER ===================== */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ===================== NAVIGATION ===================== */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  nav button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* ===================== MAIN CONTAINER ===================== */
+  main#app {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* ===================== FORMULARIOS ===================== */
+  form {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  form h2, form h3 {
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* ===================== RESULTADOS DE BÚSQUEDA ===================== */
+  ul#resultadosBusqueda,
+  ul#resultadosBusquedaCurso {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  ul#resultadosBusqueda li,
+  ul#resultadosBusquedaCurso li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  ul#resultadosBusqueda li:hover,
+  ul#resultadosBusquedaCurso li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* ===================== SECCIÓN AGREGAR ESTUDIANTE ===================== */
+  #agregarEstudiante {
+    margin: 20px 0;
+    background: #fff;
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  #agregarEstudiante input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* ===================== TABLA DE NOTAS ===================== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .nota-final {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .course-grades img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  
+  /* ===================== DASHBOARD ===================== */
+  .dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .dashboard-menu {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dashboard-menu button {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: var(--radius);
+    background-color: #4cd137;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-menu button:hover {
+    background-color: #424242;
+  }
+  
+  /* ===================== CURSO SELECCIONADO EN EVALUAR ===================== */
+  #cursoInfo .card-curso {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #cursoInfo .card-curso img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  /* ===================== SISTEMA DE MENSAJES ===================== */
+  .mensaje {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: var(--radius);
+    color: white;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease-out forwards;
+    max-width: 350px;
+  }
+  
+  .mensaje-exito {
+    background-color: var(--success-color);
+  }
+  
+  .mensaje-error {
+    background-color: var(--error-color);
+  }
+  
+  .mensaje-info {
+    background-color: var(--info-color);
+  }
+  
+  .mensaje-advertencia {
+    background-color: var(--warning-color);
+  }
+  
+  .mensaje-icono {
+    font-size: 1.2rem;
+  }
+  
+  .mensaje-contenido {
+    flex-grow: 1;
+  }
+  
+  .mensaje-cerrar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .mensaje-cerrar:hover {
+    opacity: 1;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    form {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 10px;
+    }
+  
+    table {
+      font-size: 0.9rem;
+    }
+  
+    .dashboard-menu {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  
+  
+  
+    
+    
+    
